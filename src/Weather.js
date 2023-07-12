@@ -5,14 +5,15 @@ export default function Weather() {
     <div className="Weather">
       <form>
         <div className="row">
-          <div className="col-9">
+          <div className="col-10">
             <input
               type="search"
               placeholder="Type a city here..."
               className="form-control"
+              autoFocus
             ></input>
           </div>
-          <div className="col-3">
+          <div className="col-2">
             <input type="submit" value="Search" className="btn btn-success" />
           </div>
         </div>
@@ -28,7 +29,8 @@ export default function Weather() {
             src="https://cdn.dribbble.com/users/77598/screenshots/5602856/media/1e44f47cd47f97cd20e4d9fe42255a75.png"
             alt="temporary icon"
           />
-          30°C
+          <span className="temperature">35</span>{" "}
+          <span className="unit">°C</span>
         </div>
         <div className="col-6">
           <ul>
