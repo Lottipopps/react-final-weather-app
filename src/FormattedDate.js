@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Date(props) {
+export default function FormattedDate(props) {
   console.log(props.dateInfo);
   let days = [
     "Sunday",
