@@ -41,7 +41,7 @@ export default function Icon(props) {
   };
   return (
     <span className="Icon">
-      <img src={codeMapping[props.imageCode]} width="30px" alt="weather-icon" />
+      <img src={codeMapping[props.imageCode]} height="150" alt="weather-icon" />
     </span>
   );
 }
