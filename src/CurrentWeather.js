@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FormattedDate from "./FormattedDate";
 import Icon from "./Icon";
+import CurrentTemperature from "./CurrentTemperature";
 
 export default function CurrentWeather(props) {
   return (
@@ -13,14 +14,15 @@ export default function CurrentWeather(props) {
         <li className="text-capitalize">{props.info.description}</li>
       </ul>
       <div className="row">
-        <div className="col-6">
-          <Icon imageCode={props.info.icon} />
-          <span className="temperature">
-            {Math.round(props.info.temperature)}
-          </span>
-          <span className="unit">°C</span>
+        <div className="col-8">
+          <div className="float-left">
+            <Icon imageCode={props.info.icon} />
+          </div>
+          <div className="float-left">
+            <CurrentTemperature celsiusTemperature={props.info.temperature} />
+          </div>
         </div>
-        <div className="col-6">
+        <div className="col-4">
           <ul>
             <li>Humidity: {props.info.humidity}%</li>
             <li>Wind: {Math.round(props.info.wind)}km/h</li>
