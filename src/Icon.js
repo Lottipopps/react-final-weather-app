@@ -40,8 +40,8 @@ export default function Icon(props) {
     "50n": Fiftyn,
   };
   return (
-    <div className="Icon">
+    <span className="Icon">
       <img src={codeMapping[props.imageCode]} height="150" alt="weather-icon" />
-    </div>
+    </span>
   );
 }

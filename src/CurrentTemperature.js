@@ -13,7 +13,7 @@ export default function CurrentTemperature(props) {
   }
   if (unit === "celsius") {
     return (
-      <div>
+      <span>
         <span className="temperature">
           {Math.round(props.celsiusTemperature)}
         </span>
@@ -23,7 +23,7 @@ export default function CurrentTemperature(props) {
             °F
           </a>
         </span>
-      </div>
+      </span>
     );
   } else {
     let farenheitTemperature = (props.celsiusTemperature * 9) / 5 + 32;

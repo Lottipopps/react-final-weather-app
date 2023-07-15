@@ -15,11 +15,19 @@ export default function CurrentWeather(props) {
       </ul>
       <div className="row">
         <div className="col-8">
-          <div className="float-left">
-            <Icon imageCode={props.info.icon} />
-          </div>
-          <div className="float-left">
-            <CurrentTemperature celsiusTemperature={props.info.temperature} />
+          <div className="row">
+            <div className="col-6">
+              <div className="float-left">
+                <Icon imageCode={props.info.icon} />
+              </div>
+            </div>
+            <div className="col-6 mt-5">
+              <div className="float-left">
+                <CurrentTemperature
+                  celsiusTemperature={props.info.temperature}
+                />
+              </div>
+            </div>
           </div>
         </div>
         <div className="col-4">
