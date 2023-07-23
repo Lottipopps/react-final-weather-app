@@ -18,7 +18,7 @@ export default function CurrentWeather(props) {
           <div className="row">
             <div className="col-6">
               <div className="float-left">
-                <Icon imageCode={props.info.icon} />
+                <Icon imageCode={props.info.icon} height="150" />
               </div>
             </div>
             <div className="col-6 mt-5">
