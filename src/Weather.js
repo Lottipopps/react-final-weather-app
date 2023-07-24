@@ -3,6 +3,7 @@ import axios from "axios";
 import "./Weather.css";
 import CurrentWeather from "./CurrentWeather";
 import WeatherForecast from "./WeatherForecast";
+import Loader from "./Loader";
 
 export default function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ ready: false });
@@ -66,6 +67,10 @@ export default function Weather(props) {
     );
   } else {
     search(city);
-    return <h1>Loading...</h1>;
+    return (
+      <div className="Loader">
+        <Loader />
+      </div>
+    );
   }
 }
