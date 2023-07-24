@@ -1,33 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import "./WeatherForecast.css";
 import Icon from "./Icon";
+import WeatherForecastDay from "./WeatherForecastDay";
 
 export default function WeatherForecast(props) {
-  console.log(props);
-
+  let [complete, setComplete] = useState(false);
+  let [forecast, setForecast] = useState(null);
   function handleResponse(response) {
-    console.log(response);
+    setForecast(response.data.daily);
+    setComplete(true);
   }
-
-  let lat = props.coordinates.latitude;
-  let lon = props.coordinates.longitude;
-  const apiKey = "58e244e95c3e78eb13e0ffotadf7c1b8";
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
-
-  axios.get(apiUrl).then(handleResponse);
-  return (
-    <div className="WeatherForecast">
-      <div className="row">
-        <div className="col">
-          <div className="forecast-day">Sun</div>
-          <Icon imageCode="snow-night" height="90" />
-          <div className="forecast-temperatures">
-            <span className="forecast-max-temp">25°</span>{" "}
-            <span className="forecast-min-temp">15°</span>
+  if (complete) {
+    return (
+      <div className="WeatherForecast">
+        <div className="row">
+          <div className="col">
+            <WeatherForecastDay info={forecast[0]} />
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let lat = props.coordinates.latitude;
+    let lon = props.coordinates.longitude;
+    const apiKey = "58e244e95c3e78eb13e0ffotadf7c1b8";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${lon}&lat=${lat}&key=${apiKey}&units=metric`;
+
+    axios.get(apiUrl).then(handleResponse);
+    return <div className="not-ready">...</div>;
+  }
 }
