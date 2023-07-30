@@ -1,5 +1,5 @@
 :root {
-  --light-color: rgb(114, 71, 71);
+  --light-color: rgb(101, 57, 57);
   --dark-color: rgb(57, 5, 5);
 }
 .Weather {
@@ -10,8 +10,8 @@
   color: var(--light-color);
   background: linear-gradient(
       180deg,
-      rgba(245, 245, 245, 0.4) 74%,
-      rgb(245, 245, 245, 0.8) 100%
+      rgba(245, 245, 245, 0.3) 60%,
+      rgb(245, 245, 245, 0.9) 100%
     ),
     url("./icons/images/pexels-johannes-plenio-1118873.jpg");
   background-repeat: no-repeat;
@@ -34,6 +34,7 @@ ul {
 }
 li {
   font-size: 20px;
+  text-align: center;
   line-height: 30px;
   list-style: none;
 }
@@ -47,4 +48,24 @@ li {
 }
 .Loader {
   text-align: center;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  img {
+    width: 100px;
+    margin-top: 7px;
+  }
+  li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .temperature {
+    font-size: 35px;
+  }
+  .unit {
+    font-size: 12px;
+  }
 }

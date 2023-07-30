@@ -8,3 +8,31 @@
 .col:hover {
   background: rgba(51, 220, 250, 0.5);
 }
+.forecast-day {
+  font-size: 25px;
+  font-weight: 900;
+}
+.forecast-max-temp {
+  font-size: 22px;
+}
+.forecast-min-temp {
+  font-size: 16px;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .col {
+    margin-top: 10px;
+  }
+  .forecast-day {
+    font-size: 18px;
+  }
+  .forecast-max-temp {
+    font-size: 16px;
+  }
+  .forecast-min-temp {
+    font-size: 14px;
+  }
+  .WeatherForecast img {
+    height: 45px;
+  }
+}

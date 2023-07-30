@@ -16,17 +16,17 @@ export default function CurrentWeather(props) {
         <li className="text-capitalize">{props.info.description}</li>
       </ul>
       <div className="row">
-        <div className="col-8">
+        <div className="col-md-8">
           <div className="row">
-            <div className="col-3">
+            <div className="col-md-3 col-5">
               <Icon imageCode={props.info.icon} height="150" />
             </div>
-            <div className="col-9 mt-5">
+            <div className="col-md-9 col-7 mt-5">
               <CurrentTemperature celsiusTemperature={props.info.temperature} />
             </div>
           </div>
         </div>
-        <div className="col-4 humidity">
+        <div className="col-md-4 humidity">
           <ul>
             <li>Humidity: {props.info.humidity}%</li>
             <li>Wind: {Math.round(props.info.wind)}km/h</li>

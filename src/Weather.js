@@ -39,9 +39,9 @@ export default function Weather(props) {
   if (weatherInfo.ready) {
     return (
       <div className="Weather">
-        <form id="city-form" onSubmit={handleSubmit}>
+        <form id="city-form" autoComplete="off" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-10">
+            <div className="col-md-10">
               <input
                 id="search-bar"
                 type="search"
@@ -51,7 +51,7 @@ export default function Weather(props) {
                 onChange={updateCity}
               ></input>
             </div>
-            <div className="col-2">
+            <div className="col-md-2">
               <input
                 id="submit-button"
                 type="submit"
