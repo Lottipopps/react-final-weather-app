@@ -56,13 +56,15 @@ export default function Weather(props) {
                 id="submit-button"
                 type="submit"
                 value="Search"
-                className="btn btn-success"
+                className="btn btn-primary"
               />
             </div>
           </div>
         </form>
-        <CurrentWeather info={weatherInfo} />
-        <WeatherForecast coordinates={weatherInfo.coord} />
+        <div className="m-10">
+          <CurrentWeather info={weatherInfo} />
+          <WeatherForecast coordinates={weatherInfo.coord} />
+        </div>
       </div>
     );
   } else {

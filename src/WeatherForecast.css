@@ -3,4 +3,8 @@
 }
 .col {
   border-radius: 5px;
+  transition: all 200ms ease-in-out;
+}
+.col:hover {
+  background: rgba(51, 220, 250, 0.5);
 }
