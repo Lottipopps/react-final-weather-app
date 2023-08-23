@@ -3,7 +3,7 @@ import Icon from "./Icon";
 
 export default function WeatherForecastDay(props) {
   let date = new Date(props.info.time * 1000);
-  let days = ["Sun", "Mon", "Tue", "Thu", "Fri", "Sat"];
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
   return (
     <div className="WeatherForecastDay">
